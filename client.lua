@@ -70,7 +70,7 @@ local function startThread(vehicle)
             end
 
             -- Prevent rotation controls while flipped/airborne
-            if Settings.regulated[class] and not Settings.regulated_exclusions[GetEntityModel(vehicle)] then
+            if Settings.regulated[class] then
                 local roll, airborne = 0.0, false
 
                 if speed < 2.0 then
